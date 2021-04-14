@@ -649,5 +649,4 @@ def get_acc_for_nframe_since_scene_transition(K, exp_type, kwargs, epoch,
   for session_id in session_ids:
     cal_acc_at_x(numrtr_xframes, dnmrtr_xframes, K, otpt[session_id][1],
                  otpt[session_id][0])
-  #return numrtr_xframes, dnmrtr_xframes
   return numrtr_xframes / dnmrtr_xframes
