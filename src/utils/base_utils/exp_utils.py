@@ -618,8 +618,6 @@ def cal_acc_at_x(numrtr_xframes, dnmrtr_xframes, K, true_clss, pred_clss):
   num_true_clss = len(true_clss)
   fst = 0
   for i in range(1, num_true_clss):
-    #if true_clss[i] == 0:
-    #  continue
     if true_clss[i] != true_clss[i-1]:
       fst = 0
     if fst <= K:
@@ -630,6 +628,17 @@ def cal_acc_at_x(numrtr_xframes, dnmrtr_xframes, K, true_clss, pred_clss):
 
 def get_acc_for_nframe_since_scene_transition(K, exp_type, kwargs, epoch,
                                               run, session_ids=HDD_TEST_SIDS):
+  """
+  Returns the ASiST@x metric.
+
+  Args:
+    K (int): The number of next frames to be considered.
+    exp_type (int): "visuals_only".
+    kwargs (dict): `dataset` specific details.
+    epoch (int): Epoch number for which ASiST@x scores are queried.
+    run (int): Run number of the experiment.
+    session_ids ([str]): The session IDs of the HDD dataset videos/sessions.
+  """
   results_dir, _, _ = _get_results_dir_num_clss_ignore_clss(HDD, exp_type, kwargs)
   results_dir = results_dir + "/run_%s/ns_test_only/" % run
   otpt = pickle.load(

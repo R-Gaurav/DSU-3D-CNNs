@@ -25,7 +25,7 @@ temporal context/depth of the visual data for Driving Scene Understanding.
 * Honda Research Institute Driving Dataset ([HDD](https://usa.honda-ri.com/HDD))
 * [VIENA2](https://sites.google.com/view/viena2-project/home)
 
-## Instructions to use the Code
+# Instructions to use our Code
 Following are the general instructions to use our code (since a variety of
 experiments were executed). In case you are having troubles to set up the
 experiment environment, please feel free to contact us.
