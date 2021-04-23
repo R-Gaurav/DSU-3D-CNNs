@@ -35,8 +35,8 @@ experiment outputs etc. and set appropriate experiment constants; this can be
 done by creating a file `DSU-3D-CNNs/src/utils/base_utils/consts.py` and mentioning
 your constants there (we have not uploaded this file since it is specific to our
 experiment environment).
-* You can execute `DSU-3D-CNNs/src/data_creators/data_prep_utils.py` file to
-extract frames of required spatial resolution.
+* You can execute `DSU-3D-CNNs/src/data_creators/create_downsampled_frames.py` file
+to extract downsampled frames of required spatial resolution.
 * Once done with frame data creation, you can then set appropriate model specific
 and dataset specific constants in file `DSU-3D-CNNs/src/train_test_code/exp_settings.py`.
 Do note that you would need a system with nearly 180GB of RAM to extract frames
